@@ -17,20 +17,22 @@ const LoginPage = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const response = await authService.login(form);
-      login(response.data);
-      toast.success('Welcome back!');
-      navigate('/dashboard');
-    } catch (err) {
-      const msg = err.response?.data?.message || 'Login failed';
-      toast.error(msg);
-    } finally {
-      setLoading(false);
-    }
-  };
+  e.preventDefault();
+  setLoading(true);
+  try {
+    const response = await authService.login(form);
+    login(response.data);
+    toast.success('Welcome back!');
+    navigate('/dashboard');
+  } catch (err) {
+    const msg = err.response?.data?.message || 'Invalid email or password';
+    toast.error(msg);
+    // Password field clear karo, email rakho
+    setForm(prev => ({ ...prev, password: '' }));
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-[#0d1117] flex items-center justify-center px-4">

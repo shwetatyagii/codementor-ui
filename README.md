@@ -1,16 +1,41 @@
-# React + Vite
+# CodeMentor AI — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend for CodeMentor AI, an AI-powered Java code evaluation platform.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 18 (Vite)
+- Tailwind CSS
+- Monaco Editor
+- Axios
+- React Router DOM
+- React Hot Toast
+- Lucide React
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- JWT Authentication (Signup/Login)
+- AI-powered Java Code Analysis
+- Monaco Code Editor
+- Dashboard
+- Submission History
+- Search Submissions
+- Submission Detail View
+- Profile Management
+- Dark Theme
+- Protected Routes
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Backend Repository
+
+https://github.com/shwetatyagii/codementor-api
+
+## Frontend Repository
+
+https://github.com/shwetatyagii/codementor-ui
